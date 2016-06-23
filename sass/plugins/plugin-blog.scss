@@ -1,0 +1,44 @@
+// -------------------------------
+// Scribe Template: CSS > Plugin: Blog
+// -------------------------------
+
+
+// -----------------------------
+// Blog Layout Breakpoints
+// -----------------------------
+
+
+$blog-large: 'only screen and (min-width : 890)';
+$blog-medium: 'only screen and (max-width : 890px)';
+$blog-small: 'only screen and (max-width : 400px)';
+
+
+
+
+// ------------------------------
+// Blog Post
+// ------------------------------
+
+
+@import 'blog/blog-post';
+
+
+
+
+// ------------------------------
+// Blog Posts List
+// ------------------------------
+
+
+@import 'blog/blog-posts-list';
+
+
+
+
+
+// ------------------------------
+// Blog Search
+// ------------------------------
+
+
+@import 'blog/blog-search';

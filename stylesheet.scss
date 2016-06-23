@@ -1,0 +1,30 @@
+// -------------------------------------
+// Kings Template: Stylesheet
+// -------------------------------------
+
+
+#tdk-toolbar {
+    display: none !important;
+}
+
+
+// -----------------------------
+// #Imports
+// -----------------------------
+
+
+// @import 'validation';
+@import 'bk-sass-framework-v8';
+// @import 'variables';
+@import 'sass/fork-variables';    // Fork Variables
+
+
+@import 'sass/theme';       // Template
+@import 'sass/typography';  // Typography
+@import 'sass/mixins';      // Mixins
+@import 'sass/widgets';     // Widgets
+
+@import 'sass/plugins/plugin-blog';       // Plugin: Blog
+@import 'sass/plugins/plugin-menu';       // Plugin: Menu
+@import 'sass/plugins/plugin-ecommerce';  // Plugin: Ecommerce
+

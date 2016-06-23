@@ -1,0 +1,333 @@
+// -------------------------------------
+// Kings Template: LESS > Widgets
+// -------------------------------------
+
+
+// -----------------------------
+// #Table of Contents
+// -----------------------------
+
+//  INCLUDES
+//  --------
+
+//  #Widget Spacing
+
+//  #Forms (General)
+//  #Contact Form
+//  #Sign Up Form
+
+//  #Navigation
+//  #Feature
+//  #Gallery
+//  #Slideshow
+
+//  #Profile
+
+//  #Twitter
+//  #Social List
+//  #Yelp Review
+
+
+//  IN FILE
+//  --------
+
+//  #Logo & Company Name
+//  #Company Name
+//  #Buttons
+//  #Dropbox
+//  #Click to Call
+//  #Images
+//  #Divider (Keyline)
+
+
+@import 'sass/widgets/widget-spacing';
+
+@import 'sass/widgets/forms';
+@import 'sass/widgets/contact-form';
+@import 'sass/widgets/signupform';
+
+@import 'sass/navigation';
+@import 'sass/widgets/feature';
+@import 'sass/widgets/gallery';
+@import 'sass/widgets/slideshow';
+
+@import 'sass/widgets/profile';
+
+@import 'sass/widgets/twitter';
+@import 'sass/widgets/social-list';
+@import 'sass/widgets/yelp-review';
+
+
+
+
+
+// -----------------------------
+// #Logo / Company Name
+// -----------------------------
+
+
+.companyname,
+.logo {
+    text-align: center;
+}
+.logo {
+    margin: 10px 0;
+}
+
+
+
+
+// -----------------------------
+// #Company Name
+// -----------------------------
+
+
+.companyname {
+    font-size: 0;
+    line-height: 0;
+}
+
+.company-link {
+    margin: 0;
+    color: $color__companyname--text;
+    -webkit-font-smoothing: antialiased;
+    text-transform: uppercase;
+
+    &:hover {
+        text-decoration: none;
+    }
+    @media #{$bp-global-medium}, #{$bp-global-small} {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    @media #{$bp-global-small} {
+        font-size: bkscale($font__companyname--font-size, 0.8);
+        line-height: bkscale($font__companyname--line-height, 0.8);
+    }
+}
+
+
+
+
+// -----------------------------
+// #Buttons
+// -----------------------------
+
+
+
+
+// #Dropbox
+// ------------------------------
+
+
+.dropbox__button,
+.dropbox__label {
+    vertical-align: top;
+}
+
+.dropbox__button {
+    margin-right: 0; // LESS Framework Reset
+}
+
+
+// Label
+.dropbox__label {
+    display: inline-block;
+    background-color: $color__button--background;
+    line-height: $font__button--line-height;
+    color: $color__button--text;
+    padding: 0 1em;
+    font-size: 14px;
+
+    @media #{$mobile} {
+        font-size:  bkscale($font__button--font-size, 0.88);
+    }
+}
+
+
+
+// #Click to Call
+// ------------------------------
+
+
+.widget__clicktocall {
+
+    .phone-number-link {
+        position: relative;
+        border: none;
+        padding: 0 26px;
+        font-size:  $font__button--font-size;
+        line-height: $font__button--line-height;
+        font-weight: $font__button--font-weight;
+        display: inline-block;
+        cursor: pointer;
+        -webkit-transition: all 0.1s ease-in-out;
+        -moz-transition: all 0.1s ease-in-out;
+        -o-transition: all 0.1s ease-in-out;
+        transition: all 0.1s ease-in-out;
+        text-align: left;
+        -webkit-appearance: none;
+        background-color: $color__button--background;
+        border-radius: 0;
+        color: $color__button--text;
+        text-transform: uppercase;
+
+        &:hover {
+            background-color: $color__button--background--hover;
+        }
+
+        @media #{$mobile} {
+            padding: 0 20px;
+            font-size:  bkscale($font__button--font-size, .9);
+            line-height: bkscale($font__button--line-height, .8);
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+
+
+
+// ------------------------------
+// #Images
+// ------------------------------
+
+
+// Image Link
+.image-link {
+    display: inline-block;
+    overflow: visible;
+}
+
+
+// Image Figure
+.imagewidget__figure {
+    margin: 0;
+    text-align: center;
+}
+
+
+// Image Alignment
+.imagewidget__caption,
+.imagewidget {
+    text-align: center;
+}
+
+
+// Image Caption
+.imagewidget__caption {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    @include flex-display;
+    @include flex-direction(column);
+    @include justify-content(center);
+
+    height: 100%;
+    margin: 0;
+    padding: 30px;
+    background-color: fade($color__image-caption--background, 50%);
+    text-align: center;
+
+    @media #{$bp-global-medium} {
+        padding: 10px 25px 15px;
+    }
+
+    @media #{$bp-global-small} {
+        padding: 5px 20px 5px;
+    }
+}
+
+
+// Image Title
+.imagewidget .image-title:after {
+    margin: 0 auto;
+}
+
+
+
+
+// Image Title & Description
+// ------------------------------
+
+.responsiveslideshow__image-title,
+.responsiveslideshow__image-description,
+.imagewidget__image-title,
+.imagewidget__image-description {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+}
+
+// Image Title
+.responsiveslideshow__image-title,
+.imagewidget__image-title {
+    margin-bottom: 10px;
+    font-family: $font__feature-headline--font-family;
+    font-size: $font__feature-headline--font-size;
+    font-weight: $font__feature-headline--font-weight;
+    line-height: $font__feature-headline--line-height;
+    letter-spacing: $font__feature-headline--letter-spacing;
+    color: $color__feature-headline--text;
+    text-transform: uppercase;
+
+    @media #{$bp-global-medium} {
+        font-size: 36px;
+        line-height: 46px;
+    }
+    @media #{$tablet} {
+        font-size: 28px;
+        line-height: 32px;
+    }
+    @media #{$mobile} {
+        font-size: 22px;
+        line-height: 20px;
+    }
+}
+
+
+// Image Description
+.responsiveslideshow__image-description,
+.imagewidget__image-description,
+.gallery__image-description {
+    font-family: $font__feature-strapline--font-family;
+    font-size: $font__feature-strapline--font-size;
+    font-weight: $font__feature-strapline--font-weight;
+    line-height: $font__feature-strapline--line-height;
+    letter-spacing: $font__feature-strapline--letter-spacing;
+    color: $color__feature-strapline--text;
+
+    @media #{$tablet} {
+        font-size: 12px;
+        line-height: 30px;
+    }
+    @media #{$mobile} {
+        font-size: 11px;
+        line-height: 18px;
+    }
+}
+
+
+
+
+// -----------------------------
+// #Divider (Keyline)
+// -----------------------------
+
+
+.widget__line {
+    line-height: 0;
+}
+
+hr.rule {
+    height: 3px;
+    background-color: darken($color__body--background, 5%);
+}
